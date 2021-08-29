@@ -1,10 +1,12 @@
 ---
 emoji: 🧢
-title: 블로그 작동 테스트
+title: Github blog로 이전했습니다!
 date: '2021-08-17 01:33:00'
 author: 이준영
 tags: blog
-categories: 블로그
+categories: 잡담
 ---
 
-# Test
+Velog에서 Github Blog로 이전!
+
+열심히 하자!

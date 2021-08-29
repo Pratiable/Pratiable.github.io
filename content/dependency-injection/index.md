@@ -3,8 +3,8 @@ emoji: 💉
 title: Dependency Injection
 date: '2021-08-22 01:45:38'
 author: 이준영
-tags: Design Pattern,
-categories: Design-Pattern
+tags: Design Pattern
+categories: 디자인패턴
 ---
 
 > ⛔️ 공부하며 정리한 내용으로 내용상 정확하지 않은 부분이 있을 수 있으니 참고 부탁드립니다!
@@ -192,3 +192,6 @@ Framework에서 DI를 해준다고 해서 너무 Framework에 의존하지 않�
 [출처2](https://medium.com/@jang.wangsu/di-dependency-injection-%EC%9D%B4%EB%9E%80-1b12fdefec4f)
 
 [출처3](https://develogs.tistory.com/19)
+
+```toc
+```
