@@ -1,7 +1,7 @@
 ---
 emoji: 💉
 title: Dependency Injection
-date: '2021-08-22 01:45:38'
+date: '2021-08-29 16:09:38'
 author: 이준영
 tags: Design Pattern
 categories: 디자인패턴
@@ -112,12 +112,14 @@ console.log(meleeRogue.attackMonster())
 ## Inversion of Control(제어의 역전)
 IoC는 객체의 생성이나 Lifecycle의 관리까지 모든 객체에 대한 제어권이 바뀌었다는 것을 의미하는 Design pattern이다.
 
-이렇게 설계를 하게 됐을 때는
 이것을 구현하기 위해서는 IoC Container가 필요한데 이 역할을 Framework가 해줄 수 있다.
+
 결국 Framework에서 클라이언트 코드에 객체를 주입해서 개발자가 신경써야 할 코드를 줄이는 방법이다.
 
 > IoC Container는 Factory Pattern과 혼동해서 사용할 수 있다고 한다.
+> 
 > 기본적으로 Factory는 단순히 객체를 생성하게 되지만 IoC Container를 사용 시 IoC의 개념이 적용되어야 한다.
+> 
 > IoC Container를 사용한다고 해서 그냥 IoC가 일어나는 것이 아니라는 뜻.
 
 Nest.js의 예제를 하나 확인해보자!
@@ -144,8 +146,9 @@ export class AccountsService {
 
 위 코드에서 AccountsService의 생성자에 accountRepository 부분을 보게되면 type만 지정해 줬는데도 아래 findAccount부분에서 accountRepository의 findOne이라는 method를 사용하고 있다.
 
-이것이 가능한 이유는 Nest.js에서 accountRepository의 type을 보고 Repository 타입을 알아서 할당해줬기 때문이다. 그래서 개발자는 위 객체의 Lifecycle을 신경쓰지 않아도
-편하게 사용하면 되기 때문이다. 이렇게 생성된 객체는 Nest.js에서 자동으로 관리를 해주기 때문이다.
+이것이 가능한 이유는 Nest.js에서 accountRepository의 type을 보고 Repository 타입을 알아서 할당해줬기 때문이다.
+
+그래서 개발자는 위 객체의 Lifecycle을 신경쓰지 않아도 편하게 사용하면 되는데 이렇게 생성된 객체는 Nest.js에서 자동으로 관리를 해주기 때문이다.
 
 ---
 
