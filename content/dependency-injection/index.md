@@ -49,7 +49,7 @@ class Rogue {
 
 위 코드를 보면 Rogue class는 Dagger class를 내부에서 새로 생성하게 되면서 의존관계가 생기게 되며, weapon을 변경하고 싶어도 다른 weapon으로 변경할 수 없게 되는 문제가 있다!
 
-이런 경우에 `Tight Coupling(강한 결합)`이 일어나게 되는데 이런 경우에 Dagger class를 변경하게 된다면 당연하게도 Rouge class까지 영향을 미치게 된다.
+이런 경우에 `Tight Coupling(강한 결합)`이 일어나게 되는데 여기서 Dagger class를 변경하게 된다면 당연하게도 Rouge class까지 영향을 미치게 된다.
 
 결국 하나의 객체가 수정되었을 때 그 객체를 의존하고 있는 다른 객체까지 수정되어야 하는 문제가 발생하고 Unit Test 작성도 어려워진다.
 
