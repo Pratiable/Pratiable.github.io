@@ -7,6 +7,6 @@ tags: blog
 categories: 잡담
 ---
 
-Velog에서 Github Blog로 이전!
+[Velog](https://velog.io/@ambitiouskyle) 에서 Github Blog로 이전!
 
 열심히 하자!
