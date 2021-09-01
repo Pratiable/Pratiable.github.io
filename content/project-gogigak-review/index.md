@@ -65,10 +65,10 @@ categories: 회고
 
 하지만 문제는 장바구니가 아닌 구매 로직에 있었다💦
 
-내가 만든 코드는 결국 실행은 잘 되었지만 효율적이지 않은 코드 사용 및 수 많은 쿼리와 N+1 Problem을 가지고 있어서 전체적인 리팩토링이 필요했다.
+내가 만든 코드는 결국 실행은 잘 되었지만 효율적이지 않은 코드 사용 및 수 많은 쿼리와 `N+1 Problem`을 가지고 있어서 전체적인 리팩토링이 필요했다.
 
 구매를 진행 할 때 장바구니 테이블에 있던 row들을 구매내역으로 옮기는 로직이 필요했고 그것들의 생성 및 각 제품들의 재고 및 판매량 관리를 위해서 많은 db row들이 수정되어야 하는 상황이었다.
-처음에는 단순하게 그냥 for loop을 사용하여 진행했었고 atomic transaction을 사용하긴 했었지만 중간에 JsonResponse로 return해야하는 부분이 있어서 문제가 있을때도 commit이 되어버렸기 때문에 method 전체를 transaction으로 연결하기 무리인 부분이 있었다.
+처음에는 단순하게 그냥 for loop을 사용하여 진행했었고 `atomic transaction`을 사용하긴 했었지만 중간에 `JsonResponse`로 return해야하는 부분이 있어서 문제가 있을때도 commit이 되어버렸기 때문에 method 전체를 `transaction`으로 연결하기 무리인 부분이 있었다.
 
 ```python
 for cart_item in cart_items:
@@ -86,7 +86,8 @@ for cart_item in cart_items:
                     cart_item.product_options.product.save()
 ```
 
-계속 고민하다가 분명히 지금 save를 안해도 queryset을 전부 save해주는 method가 있지 않을까 생각하다가 order_list에 장바구니에서 받아온 item들로 row를 생성할 때 `bulk_create`를 사용해서 효과적으로 쿼리문을 줄이고 속도도 빨라지게 했던 기억이 있어서 update도 있지 않을까? 하고 찾아 본 결과 `bulk_update` 라는 것이 존재하는걸 확인했다! (프로젝트 최종 발표 날 아침에.....🤣)
+계속 고민하다가 분명히 지금 save를 안해도 queryset을 전부 save해주는 method가 있지 않을까 생각하다가 order_list에 장바구니에서 받아온 item들로 row를 생성할 때 `bulk_create`를 사용해서 효과적으로 쿼리문을 줄이고 속도도 빨라지게 했던 기억이 있어서 update도 있지 않을까? 하고 찾아 본 결과 
+`bulk_update` 라는 것이 존재하는걸 확인했다! (프로젝트 최종 발표 날 아침에.....🤣)
 
 발표 전까지 수정을 해서 결국 아래 코드로 변경하게 되었다!
 
@@ -110,9 +111,9 @@ product_updates   = []
     Product.objects.bulk_update(product_updates, fields=['sales'])
 ```
 
-위의 코드로 변경을 해서 bulk_update로 200 ok return직전에 바뀐 field를 업데이트 하니 쿼리문도 그렇고 코드도 깔끔해지는 엄청난 효과가 있었다!
+위의 코드로 변경을 해서 `bulk_update`로 `JsonResponse`직전에 바뀐 field를 업데이트 하니 쿼리문도 그렇고 코드도 깔끔해지는 엄청난 효과가 있었다!
 
-그리고 select_related를 사용하여 발생하는 쿼리를 줄여보려고 했으나 결국 최종 발표 전에는 수정하지 못하고 그 날 저녁에 위워크에 남아서 연구한 결과 문제되는 부분을 찾아서 수정까지 완료했다!
+그리고 `select_related`를 사용하여 발생하는 쿼리를 줄여보려고 했으나 결국 최종 발표 전에는 수정하지 못하고 그 날 저녁에 위워크에 남아서 연구한 결과 문제되는 부분을 찾아서 수정까지 완료했다!
 
 원래 처음에 만들었던 코드에서는 40개정도의 물품을 구매할 때 약 200개 이상의 쿼리문이 사용됐으나 프로젝트 발표가 끝난 저녁에는 10개 이하로 줄어드는 기적같은 모습을 확인할 수 있었다!!
 
