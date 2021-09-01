@@ -191,7 +191,7 @@ void function() {
 <p>계속 고민중에 분명히 지금 save를 안해도 queryset을 전부 save해주는 method가 있지 않을까 생각하다가 <code class="language-text">order_list</code>에 장바구니에서 받아온 item들로 row를 생성할 때 <code class="language-text">bulk_create</code>를 사용해서 효과적으로 쿼리문을 줄이고 속도도 빨라지게 했던 기억이 있어서 update도 있지 않을까? 하고 찾아 본 결과
 <code class="language-text">bulk_update</code> 라는 것이 존재하는걸 확인했다! (프로젝트 최종 발표 날 아침에…🤣)</p>
 <p>발표 전까지 수정을 해서 결국 아래 코드로 변경하게 되었다!</p>
-<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">product_updates   <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">product_updates <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
     <span class="token keyword">for</span> cart_item <span class="token keyword">in</span> cart_items<span class="token punctuation">:</span>
         <span class="token keyword">if</span> cart_item<span class="token punctuation">.</span>quantity <span class="token operator">></span> cart_item<span class="token punctuation">.</span>product_options<span class="token punctuation">.</span>product<span class="token punctuation">.</span>stock<span class="token punctuation">:</span>
