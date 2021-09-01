@@ -86,7 +86,7 @@ for cart_item in cart_items:
                     cart_item.product_options.product.save()
 ```
 
-계속 고민하다가 분명히 지금 save를 안해도 queryset을 전부 save해주는 method가 있지 않을까 생각하다가 order_list에 장바구니에서 받아온 item들로 row를 생성할 때 `bulk_create`를 사용해서 효과적으로 쿼리문을 줄이고 속도도 빨라지게 했던 기억이 있어서 update도 있지 않을까? 하고 찾아 본 결과 
+계속 고민중에 분명히 지금 save를 안해도 queryset을 전부 save해주는 method가 있지 않을까 생각하다가 `order_list`에 장바구니에서 받아온 item들로 row를 생성할 때 `bulk_create`를 사용해서 효과적으로 쿼리문을 줄이고 속도도 빨라지게 했던 기억이 있어서 update도 있지 않을까? 하고 찾아 본 결과 
 `bulk_update` 라는 것이 존재하는걸 확인했다! (프로젝트 최종 발표 날 아침에.....🤣)
 
 발표 전까지 수정을 해서 결국 아래 코드로 변경하게 되었다!
