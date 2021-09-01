@@ -92,7 +92,7 @@ for cart_item in cart_items:
 발표 전까지 수정을 해서 결국 아래 코드로 변경하게 되었다!
 
 ```python
-product_updates   = []
+product_updates = []
 
     for cart_item in cart_items:
         if cart_item.quantity > cart_item.product_options.product.stock:
