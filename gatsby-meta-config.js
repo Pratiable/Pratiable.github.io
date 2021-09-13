@@ -15,7 +15,7 @@ module.exports = {
     bio: {
       role: `개발자`,
       description: ['소통의 가치를 아는', '지식의 나눔을 실천하는', '효율적인 시스템을 추구하는'],
-      thumbnail: 'memoji.png', // Path to the image in the 'asset' folder
+      thumbnail: 'memoji.gif', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/Pratiable`,
