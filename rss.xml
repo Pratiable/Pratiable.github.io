@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[pratiable.github.io]]></title><description><![CDATA[코딩이나 하자😊]]></description><link>http://pratiable.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Sep 2021 08:39:42 GMT</lastBuildDate><item><title><![CDATA[Database]]></title><description><![CDATA[Database란? 일반적으로 컴퓨터 시스템에 저장된 정보 또는 데이터의 집합 DBMS()으로 제어 데이터와 DBMS…]]></description><link>http://pratiable.github.io/about-database/</link><guid isPermaLink="false">http://pratiable.github.io/about-database/</guid><pubDate>Tue, 21 Sep 2021 11:14:58 GMT</pubDate><content:encoded>&lt;h1 id=&quot;database란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#database%EB%9E%80&quot; aria-label=&quot;database란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Database란?&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[pratiable.github.io]]></title><description><![CDATA[코딩이나 하자😊]]></description><link>http://pratiable.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Sep 2021 12:22:20 GMT</lastBuildDate><item><title><![CDATA[Database]]></title><description><![CDATA[Database란? 일반적으로 컴퓨터 시스템에 저장된 정보 또는 데이터의 집합 DBMS()으로 제어 데이터와 DBMS…]]></description><link>http://pratiable.github.io/about-database/</link><guid isPermaLink="false">http://pratiable.github.io/about-database/</guid><pubDate>Tue, 21 Sep 2021 11:14:58 GMT</pubDate><content:encoded>&lt;h1 id=&quot;database란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#database%EB%9E%80&quot; aria-label=&quot;database란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Database란?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;일반적으로 컴퓨터 시스템에 저장된 정보 또는 데이터의 집합&lt;/li&gt;
 &lt;li&gt;DBMS(&lt;code class=&quot;language-text&quot;&gt;데이터베이스 관리 시스템&lt;/code&gt;)으로 제어&lt;/li&gt;
@@ -44,7 +44,7 @@
 &lt;tr&gt;
 &lt;td&gt;1&lt;/td&gt;
 &lt;td&gt;Lewis Hamilton&lt;/td&gt;
-&lt;td&gt;Mercesdes&lt;/td&gt;
+&lt;td&gt;Mercedes&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2&lt;/td&gt;
@@ -71,8 +71,8 @@
 &lt;ul&gt;
 &lt;li&gt;각각의 테이블은 column과 row로 구성되어 있음&lt;/li&gt;
 &lt;li&gt;column은 테이블의 각 항목(&lt;code class=&quot;language-text&quot;&gt;id&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;team&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;row는 각 항목들의 실제 값(&lt;code class=&quot;language-text&quot;&gt;Lewis hamilton&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Daniel Ricciardo&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Ferrari&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;각 row는 자신만의 고유 키 (&lt;code class=&quot;language-text&quot;&gt;Primary Key&lt;/code&gt;)가 있고 고유 키를 통해서 해동 row를 찾거나 인용(&lt;code class=&quot;language-text&quot;&gt;reference&lt;/code&gt;)하게 됨&lt;/li&gt;
+&lt;li&gt;row는 각 항목들의 실제 값(&lt;code class=&quot;language-text&quot;&gt;Lewis Hamilton&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Daniel Ricciardo&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Ferrari&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;각 row는 자신만의 고유 키 (&lt;code class=&quot;language-text&quot;&gt;Primary Key&lt;/code&gt;)가 있고 고유 키를 통해서 해당 row를 찾거나 인용(&lt;code class=&quot;language-text&quot;&gt;reference&lt;/code&gt;)하게 됨&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -83,8 +83,8 @@
 &lt;ul&gt;
 &lt;li&gt;테이블 A의 row와 테이블 B의 row가 정확히 일대일 매칭이 되는 관계&lt;/li&gt;
 &lt;li&gt;결혼으로 생각하면 남-녀 한 명씩만 결혼을 할 수 있는 것처럼 일대일 매칭&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;One to One 관계에서는 pk, fk가 어느쪽에 있던 문제는 되지 않음&lt;/p&gt;
+&lt;li&gt;One to One 관계에서는 pk, fk가 어느쪽에 있던 문제는 되지 않음&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id=&quot;2-one-to-many&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-one-to-many&quot; aria-label=&quot;2 one to many permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2) One to Many&lt;/h4&gt;
 &lt;p&gt;테이블 A의 row가 테이블 B의 여러 row와 연결이 되는 관계
 부모-자식간의 관계로 생각하면 쉽다
@@ -93,16 +93,14 @@
 &lt;p&gt;테이블 A의 여러 row가 테이블 B의 여러 row와 연결이 되는 관계
 서로가 서로를 1:N 관계로 보고 있는 것
 학원과 학생의 관계를 생각해 보면 한 학원에는 여러명의 수강생이 있고 수강생도 여러 학원을 수강할 수 있으므로 N:M관계를 가진다고 할 수 있음&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;테이블과-테이블을-연결하는-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%85%8C%EC%9D%B4%EB%B8%94%EA%B3%BC-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;테이블과 테이블을 연결하는 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;테이블과 테이블을 연결하는 방법&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Foreign key(외부키)라는 개념을 사용하여 주로 연결함&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;다른 테이블의 Primary key를 참조한다&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Foreign key&lt;/code&gt;(외부키)라는 개념을 사용하여 주로 연결함&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;다른 테이블의 &lt;code class=&quot;language-text&quot;&gt;Primary key&lt;/code&gt;를 참조&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -167,7 +165,34 @@
 &lt;p&gt;&lt;a href=&quot;https://victorydntmd.tistory.com/129&quot;&gt;https://victorydntmd.tistory.com/129&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/ACID&quot;&gt;https://ko.wikipedia.org/wiki/ACID&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://hoon93.tistory.com/24&quot;&gt;https://hoon93.tistory.com/24&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;toc&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[js로 알고리즘 풀다가 시간초과 나올 때]]></title><description><![CDATA[js로 알고리즘 풀다가 시간초과 나올 때(console.log…]]></description><link>http://pratiable.github.io/boj-js-output-problem/</link><guid isPermaLink="false">http://pratiable.github.io/boj-js-output-problem/</guid><pubDate>Tue, 07 Sep 2021 08:51:24 GMT</pubDate><content:encoded>&lt;h1 id=&quot;js로-알고리즘-풀다가-시간초과-나올-때consolelog-관련&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#js%EB%A1%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%92%80%EB%8B%A4%EA%B0%80-%EC%8B%9C%EA%B0%84%EC%B4%88%EA%B3%BC-%EB%82%98%EC%98%AC-%EB%95%8Cconsolelog-%EA%B4%80%EB%A0%A8&quot; aria-label=&quot;js로 알고리즘 풀다가 시간초과 나올 때consolelog 관련 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;js로 알고리즘 풀다가 시간초과 나올 때(console.log 관련)&lt;/h1&gt;
+&lt;div class=&quot;table-of-contents&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#database%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;Database를 사용하는 이유?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#rdbms-relational-database-management-system&quot;&gt;RDBMS (Relational DataBase Management System)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#rdbms%EC%97%90%EC%84%9C-%ED%85%8C%EC%9D%B4%EB%B8%94%EB%81%BC%EB%A6%AC%EC%9D%98-%EC%97%B0%EA%B2%B0-%EC%A2%85%EB%A5%98&quot;&gt;RDBMS에서 테이블끼리의 연결 종류&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-one-to-one&quot;&gt;1) One to One&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-one-to-many&quot;&gt;2) One to Many&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-many-to-many&quot;&gt;3) Many to Many&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%ED%85%8C%EC%9D%B4%EB%B8%94%EA%B3%BC-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95&quot;&gt;테이블과 테이블을 연결하는 방법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%ED%85%8C%EC%9D%B4%EB%B8%94%EB%93%A4%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;테이블들을 연결하는 이유?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#acidatomicity-consistency-isolation-durability&quot;&gt;ACID(Atomicity, Consistency, Isolation, Durability)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#commit--rollback&quot;&gt;Commit &amp;#x26; Rollback&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#commit&quot;&gt;Commit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#rollback&quot;&gt;Rollback&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[js로 알고리즘 풀다가 시간초과 나올 때]]></title><description><![CDATA[js로 알고리즘 풀다가 시간초과 나올 때(console.log…]]></description><link>http://pratiable.github.io/boj-js-output-problem/</link><guid isPermaLink="false">http://pratiable.github.io/boj-js-output-problem/</guid><pubDate>Tue, 07 Sep 2021 08:51:24 GMT</pubDate><content:encoded>&lt;h1 id=&quot;js로-알고리즘-풀다가-시간초과-나올-때consolelog-관련&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#js%EB%A1%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%92%80%EB%8B%A4%EA%B0%80-%EC%8B%9C%EA%B0%84%EC%B4%88%EA%B3%BC-%EB%82%98%EC%98%AC-%EB%95%8Cconsolelog-%EA%B4%80%EB%A0%A8&quot; aria-label=&quot;js로 알고리즘 풀다가 시간초과 나올 때consolelog 관련 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;js로 알고리즘 풀다가 시간초과 나올 때(console.log 관련)&lt;/h1&gt;
 &lt;h2 id=&quot;왜-시간초과가-나오니&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%99%9C-%EC%8B%9C%EA%B0%84%EC%B4%88%EA%B3%BC%EA%B0%80-%EB%82%98%EC%98%A4%EB%8B%88&quot; aria-label=&quot;왜 시간초과가 나오니 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;왜 시간초과가 나오니…&lt;/h2&gt;
 &lt;p&gt;백준에서 알고리즘 문제를 푸는데 시간초과로 정답 통과가 안되는 상황이 발생했다.
 로직적인 문제인건지 계속 생각해보며 코드 수정을 했는데 시간이 좀 오래 걸릴만한 테스트 케이스로 테스트 해보니

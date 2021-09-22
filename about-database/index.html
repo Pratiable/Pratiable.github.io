@@ -147,7 +147,7 @@ void function() {
 <tr>
 <td>1</td>
 <td>Lewis Hamilton</td>
-<td>Mercesdes</td>
+<td>Mercedes</td>
 </tr>
 <tr>
 <td>2</td>
@@ -174,8 +174,8 @@ void function() {
 <ul>
 <li>각각의 테이블은 column과 row로 구성되어 있음</li>
 <li>column은 테이블의 각 항목(<code class="language-text">id</code>, <code class="language-text">name</code>, <code class="language-text">team</code>)</li>
-<li>row는 각 항목들의 실제 값(<code class="language-text">Lewis hamilton</code>, <code class="language-text">Daniel Ricciardo</code>, <code class="language-text">Ferrari</code>)</li>
-<li>각 row는 자신만의 고유 키 (<code class="language-text">Primary Key</code>)가 있고 고유 키를 통해서 해동 row를 찾거나 인용(<code class="language-text">reference</code>)하게 됨</li>
+<li>row는 각 항목들의 실제 값(<code class="language-text">Lewis Hamilton</code>, <code class="language-text">Daniel Ricciardo</code>, <code class="language-text">Ferrari</code>)</li>
+<li>각 row는 자신만의 고유 키 (<code class="language-text">Primary Key</code>)가 있고 고유 키를 통해서 해당 row를 찾거나 인용(<code class="language-text">reference</code>)하게 됨</li>
 </ul>
 </blockquote>
 </li>
@@ -186,8 +186,8 @@ void function() {
 <ul>
 <li>테이블 A의 row와 테이블 B의 row가 정확히 일대일 매칭이 되는 관계</li>
 <li>결혼으로 생각하면 남-녀 한 명씩만 결혼을 할 수 있는 것처럼 일대일 매칭</li>
-<li>
-<p>One to One 관계에서는 pk, fk가 어느쪽에 있던 문제는 되지 않음</p>
+<li>One to One 관계에서는 pk, fk가 어느쪽에 있던 문제는 되지 않음</li>
+</ul>
 <h4 id="2-one-to-many" style="position:relative;"><a href="#2-one-to-many" aria-label="2 one to many permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) One to Many</h4>
 <p>테이블 A의 row가 테이블 B의 여러 row와 연결이 되는 관계
 부모-자식간의 관계로 생각하면 쉽다
@@ -196,16 +196,14 @@ void function() {
 <p>테이블 A의 여러 row가 테이블 B의 여러 row와 연결이 되는 관계
 서로가 서로를 1:N 관계로 보고 있는 것
 학원과 학생의 관계를 생각해 보면 한 학원에는 여러명의 수강생이 있고 수강생도 여러 학원을 수강할 수 있으므로 N:M관계를 가진다고 할 수 있음</p>
-</li>
-</ul>
 <hr>
 <h3 id="테이블과-테이블을-연결하는-방법" style="position:relative;"><a href="#%ED%85%8C%EC%9D%B4%EB%B8%94%EA%B3%BC-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" aria-label="테이블과 테이블을 연결하는 방법 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>테이블과 테이블을 연결하는 방법</h3>
 <ul>
 <li>
-<p>Foreign key(외부키)라는 개념을 사용하여 주로 연결함</p>
-<ul>
-<li>다른 테이블의 Primary key를 참조한다</li>
-</ul>
+<p><code class="language-text">Foreign key</code>(외부키)라는 개념을 사용하여 주로 연결함</p>
+<blockquote>
+<p>다른 테이블의 <code class="language-text">Primary key</code>를 참조</p>
+</blockquote>
 </li>
 </ul>
 <hr>
@@ -270,4 +268,31 @@ void function() {
 <p><a href="https://victorydntmd.tistory.com/129">https://victorydntmd.tistory.com/129</a></p>
 <p><a href="https://ko.wikipedia.org/wiki/ACID">https://ko.wikipedia.org/wiki/ACID</a></p>
 <p><a href="https://hoon93.tistory.com/24">https://hoon93.tistory.com/24</a></p>
-<p><code class="language-text">toc</code></p></div></div></div><div class="post-cards-adjacent-wrapper"><div class="post-cards-adjacent"><div class="post-card-adjacent-wrapper"><a class="post-card prev" href="/boj-js-output-problem/"><div class="direction">이전 글</div><div class="title">js로 알고리즘 풀다가 시간초과 나올 때</div></a></div><div class="post-card-adjacent-wrapper"></div></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2021<!-- --> <a href="https://github.com/Pratiable">이준영</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/about-database/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-384ea82b9c97dbd7ee60.js"],"app":["/app-5ae717db43b95f42ea4d.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-18966798326ae6e5a169.js"],"component---src-pages-about-js":["/component---src-pages-about-js-0ed5203fa036aa596443.js"],"component---src-pages-index-js":["/component---src-pages-index-js-29b9dd2fd8d73278f20a.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5ea40d560b401e429c55.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-d01b478dab935d07b01d.js"]};/*]]>*/</script><script src="/polyfill-384ea82b9c97dbd7ee60.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-5ea40d560b401e429c55.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-ac5c80044f20d501767d.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-5ae717db43b95f42ea4d.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/webpack-runtime-cccc7f73f41d72cf4959.js" async=""></script></body></html>
+<div class="table-of-contents">
+<ul>
+<li><a href="#database%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0">Database를 사용하는 이유?</a></li>
+<li>
+<p><a href="#rdbms-relational-database-management-system">RDBMS (Relational DataBase Management System)</a></p>
+<ul>
+<li>
+<p><a href="#rdbms%EC%97%90%EC%84%9C-%ED%85%8C%EC%9D%B4%EB%B8%94%EB%81%BC%EB%A6%AC%EC%9D%98-%EC%97%B0%EA%B2%B0-%EC%A2%85%EB%A5%98">RDBMS에서 테이블끼리의 연결 종류</a></p>
+<ul>
+<li><a href="#1-one-to-one">1) One to One</a></li>
+<li><a href="#2-one-to-many">2) One to Many</a></li>
+<li><a href="#3-many-to-many">3) Many to Many</a></li>
+</ul>
+</li>
+<li><a href="#%ED%85%8C%EC%9D%B4%EB%B8%94%EA%B3%BC-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95">테이블과 테이블을 연결하는 방법</a></li>
+<li><a href="#%ED%85%8C%EC%9D%B4%EB%B8%94%EB%93%A4%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0">테이블들을 연결하는 이유?</a></li>
+<li><a href="#acidatomicity-consistency-isolation-durability">ACID(Atomicity, Consistency, Isolation, Durability)</a></li>
+<li>
+<p><a href="#commit--rollback">Commit &#x26; Rollback</a></p>
+<ul>
+<li><a href="#commit">Commit</a></li>
+<li><a href="#rollback">Rollback</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div></div></div></div><div class="post-cards-adjacent-wrapper"><div class="post-cards-adjacent"><div class="post-card-adjacent-wrapper"><a class="post-card prev" href="/boj-js-output-problem/"><div class="direction">이전 글</div><div class="title">js로 알고리즘 풀다가 시간초과 나올 때</div></a></div><div class="post-card-adjacent-wrapper"></div></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2021<!-- --> <a href="https://github.com/Pratiable">이준영</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/about-database/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-384ea82b9c97dbd7ee60.js"],"app":["/app-5ae717db43b95f42ea4d.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-18966798326ae6e5a169.js"],"component---src-pages-about-js":["/component---src-pages-about-js-0ed5203fa036aa596443.js"],"component---src-pages-index-js":["/component---src-pages-index-js-29b9dd2fd8d73278f20a.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5ea40d560b401e429c55.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-d01b478dab935d07b01d.js"]};/*]]>*/</script><script src="/polyfill-384ea82b9c97dbd7ee60.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-5ea40d560b401e429c55.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-ac5c80044f20d501767d.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-5ae717db43b95f42ea4d.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/webpack-runtime-cccc7f73f41d72cf4959.js" async=""></script></body></html>
