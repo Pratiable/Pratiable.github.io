@@ -31,15 +31,16 @@ categories: Database
 >
 > | Primary Key (id) | name             | team      |
 > |------------------|------------------|-----------|
-> | 1                | Lewis Hamilton   | Mercesdes |
+> | 1                | Lewis Hamilton   | Mercedes |
 > | 2                | Max Verstappen   | Redbull   |
 > | 3                | Charles Leclerc  | Ferrari   |
 > | 4                | Daniel Ricciardo | Mclaren   |
 > | 5                | George Russel    | Williams  |
+>
 > - 각각의 테이블은 column과 row로 구성되어 있음
 > - column은 테이블의 각 항목(`id`, `name`, `team`)
-> - row는 각 항목들의 실제 값(`Lewis hamilton`, `Daniel Ricciardo`, `Ferrari`)
-> - 각 row는 자신만의 고유 키 (`Primary Key`)가 있고 고유 키를 통해서 해동 row를 찾거나 인용(`reference`)하게 됨
+> - row는 각 항목들의 실제 값(`Lewis Hamilton`, `Daniel Ricciardo`, `Ferrari`)
+> - 각 row는 자신만의 고유 키 (`Primary Key`)가 있고 고유 키를 통해서 해당 row를 찾거나 인용(`reference`)하게 됨
 
 ---
 
@@ -49,10 +50,12 @@ categories: Database
 - 테이블 A의 row와 테이블 B의 row가 정확히 일대일 매칭이 되는 관계
 - 결혼으로 생각하면 남-녀 한 명씩만 결혼을 할 수 있는 것처럼 일대일 매칭
 - One to One 관계에서는 pk, fk가 어느쪽에 있던 문제는 되지 않음
+
 #### 2) One to Many
 테이블 A의 row가 테이블 B의 여러 row와 연결이 되는 관계
 부모-자식간의 관계로 생각하면 쉽다
 부모 입장에서는 여러 명의 자녀를 가질 수 있으나 자녀 입장에서는 부모가 하나
+
 #### 3) Many to Many
 테이블 A의 여러 row가 테이블 B의 여러 row와 연결이 되는 관계
 서로가 서로를 1:N 관계로 보고 있는 것
@@ -60,8 +63,8 @@ categories: Database
 
 ---
 ### 테이블과 테이블을 연결하는 방법
-- Foreign key(외부키)라는 개념을 사용하여 주로 연결함
-    - 다른 테이블의 Primary key를 참조한다
+- `Foreign key`(외부키)라는 개념을 사용하여 주로 연결함
+  >다른 테이블의 `Primary key`를 참조
 
 ---
 
@@ -114,4 +117,5 @@ https://ko.wikipedia.org/wiki/ACID
 
 https://hoon93.tistory.com/24
 
-```toc```
+```toc
+```
