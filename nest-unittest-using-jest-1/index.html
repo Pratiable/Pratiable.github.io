@@ -135,16 +135,16 @@ void function() {
 <p>Mocking은 단위 test를 작성할 때 해당 코드가 의존하고 있는 부분을 가짜로 대체하는 기법을 말한다. 일반적으로 테스트할 코드가 의존하는 부분을 직접 생성하기 어려운 경우 mocking이 많이 활용된다!</p>
 <p>Mocking을 하지 않고 실제 환경과 같이 테스트 환경을 설정하게 됐을 때 실제 db를 사용한다면 여러 문제점이 발생될 수 있는데</p>
 <ul>
-<li>db접속과 같이 network이나 I/O 작업이 포함된 테스트는 실행 속도가 느려짐</li>
+<li>db 접속과 같이 network이나 I/O 작업이 포함된 테스트는 실행 속도가 느려짐</li>
 <li>CI/CD의 일부에 테스트가 자동화되어 있다면 속도가 느려서 문제가 생길 수 있음</li>
 <li>테스트 자체를 위한 코드보다 db와 연결하고 트랜잭션 생성, 쿼리 전송하는 코드가 더 길어질 수 있음</li>
 <li>테스트 실행 순간 db가 오프라인 된다면 테스트는 실패하고 테스트 자체가 인프라 환경에 영향을 받음</li>
 </ul>
-<p>위와 같은 문제 말고도 여러가지 크고 작은 문제들이 발생할 수 있고, 특정 기능만 분리해서 테스트 하겠다는 <strong>unit test의 목적에 부합하지 않게</strong>된다.</p>
-<p>Mocking은 이런 상황에서 실제 객체처럼 사용 가능한 가짜 객체를 생성하는 매커니즘 제공 및 테스트 실행 중 가짜 객체에 어떤일들이 발생했는지 기억하고 있기 때문에 내부적으로 이 객체가 어떻게 사용되는지 검증이 가능하다.</p>
+<p>위와 같은 문제 말고도 여러 가지 크고 작은 문제들이 발생할 수 있고, 특정 기능만 분리해서 테스트하겠다는 <strong>unit test의 목적에 부합하지 않게</strong>된다.</p>
+<p>Mocking은 이런 상황에서 실제 객체처럼 사용 가능한 가짜 객체를 생성하는 메커니즘 제공 및 테스트 실행 중 가짜 객체에 어떤 일들이 발생했는지 기억하고 있기 때문에 내부적으로 이 객체가 어떻게 사용되는지 검증이 가능하다.</p>
 <hr>
 <h3 id="mocking으로-테스트-환경-준비" style="position:relative;"><a href="#mocking%EC%9C%BC%EB%A1%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84" aria-label="mocking으로 테스트 환경 준비 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mocking으로 테스트 환경 준비</h3>
-<p>Mocking이 어떤건지 간단하게 알아 봤으니 실제 jest에서 어떻게 mocking으로 unit-test 환경을 준비할 지 코드로 확인해보자!</p>
+<p>Mocking이 어떤 건지 간단하게 알아봤으니 실제 jest에서 어떻게 mocking으로 unit-test 환경을 준비할지 코드로 확인해 보자!</p>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> mockUserRepository <span class="token operator">=</span> <span class="token punctuation">{</span>
   save<span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
   findOne<span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -265,16 +265,19 @@ Record를 사용하여 Repository&lt;T>의 메서드를 추출한 값을 key값 
       />
     </span></p>
 <p>이렇게 어느 테스트에서 실패했는지, 어떤 로직에서 다른지 등등 자세하게 표시해줘서 어떤것이 문제인지 빠르게 파악할 수 있다.</p>
+<hr>
 <h3 id="마치며" style="position:relative;"><a href="#%EB%A7%88%EC%B9%98%EB%A9%B0" aria-label="마치며 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>마치며</h3>
 <p>Jest를 사용하면 unit-test를 확실히 쉽게 할 수 있는 장점이 있다. 현재 예전에 진행했던 프로젝트를 django에서 nest.js로 마이그레이션 하고있는데 unit-test를 확실하게 작성하며 진행하려고 하다보니 인턴십을 진행할 때는 보지 못했던 디테일한 함수의 사용법 등을 다시 확인하게 되었다. 아직 이번 글에서 소개하지 못한 jest의 여러 기능들이 존재하는데 그런 부분들은 앞으로 코드작성을 하면서 블로그에 다른 글로 정리해 볼 것이다!</p>
-<p>정보에 잘못된 부분이 있다면 댓글로 피드백 주시면 확인 후 수정하도록 하겠습니다!</p>
-<blockquote>
-<p>ref.</p>
-</blockquote>
-<blockquote>
-<p><a href="https://www.daleseo.com/jest-fn-spy-on/">https://www.daleseo.com/jest-fn-spy-on/</a>
-<a href="https://darrengwon.tistory.com/1004?category=915252">https://darrengwon.tistory.com/1004?category=915252</a></p>
-</blockquote>
+<p>정보에 잘못된 부분이 있다면 댓글로 피드백 주시면 확인 후 수정하도록 하겠습니다!😃</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<p><strong>ref.</strong></p>
+<p><a href="https://www.daleseo.com/jest-fn-spy-on/">출처 1</a>
+<a href="https://darrengwon.tistory.com/1004?category=915252">출처 2</a></p>
 <div class="table-of-contents">
 <ul>
 <li><a href="#jest%EB%9E%80">Jest란?</a></li>
